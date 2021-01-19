@@ -1,0 +1,73 @@
+<!--
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Admin Links</a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active"><a class="nav-link" routerLink="admin/login">Login</a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="admin/list">List</a></li>
+    </ul>
+  </div>
+</nav>
+-->
+
+
+<div class="container-fluid mb-5">
+  
+  <ul>
+    <li><a href="javascript:return false;">Admin Links</a></li>
+    <li>
+      <a routerLink="admin/login">Login</a>
+    </li>
+    <li>
+      <a routerLink="admin/list">List</a>
+    </li>
+  </ul>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <hr>
+      <div class="text-center" *ngIf="post | async as p">
+
+        <h2>{{ p.text }}</h2>
+        <h4>Votes: <span class="btn btn-primary btn-lg">{{ p.likes }}</span></h4>
+
+        <button class="btn btn-primary btn-lg" (click)="upvote()">Upvote</button>
+        &nbsp;
+        <button class="btn btn-danger btn-lg" (click)="downvote()">Downvote</button>
+        &nbsp;
+        <button class="btn btn-success btn-lg" (click)="resetPost()">Reset</button>
+
+        <hr>
+        <input class="form-control" [(ngModel)]="text">
+        <hr>
+        <button class="btn btn-warning btn-lg" (click)="editText()">Change Title</button>
+
+      </div>
+      <hr>
+    </div>
+    <div class="col-md-6">
+      <h2>Lazy loading component in Angular</h2>
+      <hr>
+      <button class="btn btn-primary btn-lg" (click)="loadContact()">load Contact</button>
+      &nbsp;
+      <button class="btn btn-danger btn-lg" (click)="loadAbout()">load About</button>
+    </div>
+  </div>
+</div>
+
+<!--
+<div class="text-center"><h2>{{ message$ | async }}</h2></div>
+-->
+
+
+<!--
+<div class="text-center">
+  <button class="btn btn-primary btn-lg" (click)="spanishMessage()">Spanish</button>
+  &nbsp;
+  <button class="btn btn-danger btn-lg" (click)="frenchMessage()">French</button>
+</div>
+-->
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

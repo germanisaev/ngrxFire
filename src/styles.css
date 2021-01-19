@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+ 
+li {  float: left; }
+ 
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+ 
+li a:hover { background-color: #111111; color: white; text-decoration: none; }
+
+.bg-primary {
+    background-color: #007bff;
+    color: #eee;
+}
+.bg-info {
+    background-color: #17a2b8;
+    color: #eee;
+}
+.bg-success {
+    background-color: #28a745;
+    color: #eee;
+}
+.bg-warning {
+    background-color: #ffc107;
+    color: #eee;
+}
+.bg-danger {
+    background-color: #dc3545;
+    color: #eee;
+}
+.bg-dark {
+    background-color: #343a40;
+    color: #eee;
+}
+.bg-secondary {
+    background-color: #6c757d;
+    color: #eee;
+}
+.bg-light {
+    background-color: #f8f9fa;
+    color: #eee;
+}
