@@ -16,6 +16,10 @@ console.warn('admin module loaded');
         CommonModule,
         AdminRoutingModule, 
     ],
+    exports: [
+        LoginComponent,
+        ListComponent
+    ],
     providers: [],
 })
 export class AdminModule { }
